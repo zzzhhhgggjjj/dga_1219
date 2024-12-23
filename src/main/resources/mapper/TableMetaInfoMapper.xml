@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.dga.meta.mapper.TableMetaInfoMapper">
+    <resultMap id="meta_map" type="com.atguigu.dga.meta.bean.TableMetaInfo" autoMapping="true">
+        <result property="id" column="tm_id"></result>
+        <result property="schemaName" column="tm_schema_name"></result>
+        <result property="tableName" column="tm_table_name"></result>
+        <result property="createTime" column="tm_create_time"></result>
+        <result property="updateTime" column="tm_update_time"></result>
+        <association property="tableMetaInfoExtra" javaType="com.atguigu.dga.meta.bean.TableMetaInfoExtra" autoMapping="true">
+            <result property="id" column="te_id"></result>
+            <result property="schemaName" column="te_schema_name"></result>
+            <result property="tableName" column="te_table_name"></result>
+            <result property="createTime" column="te_create_time"></result>
+            <result property="updateTime" column="te_update_time"></result>
+        </association>
+
+    </resultMap>
+</mapper>
